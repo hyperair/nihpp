@@ -1,4 +1,6 @@
-AM_CXXFLAGS = -std=c++0x
+ACLOCAL_AMFLAGS = -Im4
+
+AM_CXXFLAGS = $(CXX0X_FLAG)
 include_HEADERS =				\
 	nihpp/ptrcreator.hh			\
 	nihpp/sharedptrcreator.hh		\

@@ -1,9 +1,13 @@
 ACLOCAL_AMFLAGS = -Im4
 
 AM_CXXFLAGS = $(CXX0X_FLAG)
-include_HEADERS =				\
+nihppdir = $(includedir)/nihpp
+nihpp_glibdir = $(nihppdir)/glib
+nihpp_HEADERS =					\
 	nihpp/ptrcreator.hh			\
-	nihpp/sharedptrcreator.hh		\
+	nihpp/sharedptrcreator.hh
+
+nihpp_glib_HEADERS =				\
 	nihpp/glib/refptrcreator.hh
 
 TESTS = tests/testptrcreator

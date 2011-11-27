@@ -19,11 +19,5 @@ namespace nihpp
         static Ptr create (Args&&... args)
         { return Ptr (new T (std::forward<Args> (args)...)); }
     };
-
-    template <typename T>
-    struct SharedPtrCreator
-    {
-        typedef PtrCreator<T, std::shared_ptr<T>> type;
-    };
 }
 #endif  // _NIH_PTRCREATOR_HH_

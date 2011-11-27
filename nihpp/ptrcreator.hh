@@ -13,11 +13,15 @@ namespace nihpp
         typedef U Ptr;
 
         static Ptr create ()
-        { return Ptr (new T); }
+        {
+            return Ptr (new T);
+        }
 
         template <typename... Args>
         static Ptr create (Args&&... args)
-        { return Ptr (new T (std::forward<Args> (args)...)); }
+        {
+            return Ptr (new T (std::forward<Args> (args)...));
+        }
     };
 }
 #endif  // _NIH_PTRCREATOR_HH_

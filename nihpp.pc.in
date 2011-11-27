@@ -1,0 +1,9 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: nihpp
+Description: C++11 general purpose utility library
+Version: 0.1
+URL: http://github.com/hyperair/nihpp

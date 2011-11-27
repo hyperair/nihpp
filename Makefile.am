@@ -15,3 +15,6 @@ check_PROGRAMS = tests/testptrcreator
 tests_testptrcreator_SOURCES = tests/testptrcreator.cc
 tests_testptrcreator_CXXFLAGS = $(GLIBMM_CFLAGS) $(AM_CXXFLAGS)
 tests_testptrcreator_LDADD = $(GLIBMM_LIBS)
+
+pkgconfigdir = $(libdir)/pkgconfig
+pkgconfig_DATA = nihpp.pc

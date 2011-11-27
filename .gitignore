@@ -16,3 +16,4 @@ aclocal.m4
 /tests/testptrcreator
 *.o
 *~
+/nihpp.pc

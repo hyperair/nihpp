@@ -9,8 +9,6 @@ AC_CONFIG_HEADERS([config.h])
 
 AC_PROG_CXX
 AC_COMPILE_STDCXX_0X
-AC_HEADER_STDCXX_0X
-
 if test "$ac_cv_cxx_compile_cxx0x_native" = yes; then
     CXX0X_FLAG=""
 elif test "$ac_cv_cxx_compile_cxx0x_cxx" = yes; then
@@ -18,9 +16,9 @@ elif test "$ac_cv_cxx_compile_cxx0x_cxx" = yes; then
 else
     AC_MSG_ERROR([C++0x support needed for $PACKAGE])
 fi
-
 AC_SUBST([CXX0X_FLAG])
 
+AC_HEADER_STDCXX_0X
 if test "$ac_cv_cxx_stdcxx_0x" = no; then
     AC_MSG_ERROR([C++0x headers needed to build $PACKAGE])
 fi

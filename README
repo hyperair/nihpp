@@ -1,0 +1,28 @@
+nihpp: a C++11 general purpose utility library
+==============================================
+
+This library is currently mainly a dumping ground of ideas that float by in my
+head that I think may be useful in any future C++ projects I take up.
+
+Requirements
+------------
+
+ * C++11 compiler (g++ or something that accepts -std=c++0x)
+ * C++11 headers
+
+Classes
+-------
+
+Currently, classes available include:
+ * nih::PtrCreator
+ * nih::SharedPtrCreator
+ * nih::Glib::RefPtrCreator
+
+PtrCreator is a templated class that is meant to be derived from, which adds
+static create() functions to construct smart pointer classes. See
+tests/testptrcreator.cc for an example of how to use it.
+
+SharedptrCreator and Glib::RefPtrCreator are shortcuts for PtrCreator<T,
+shared_ptr<T>> and PtrCreator<T, Glib::RefPtr<T>> respectively. They would
+ideally be templated typedefs, but g++ does not seem to support them properly
+just yet.

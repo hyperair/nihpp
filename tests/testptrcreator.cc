@@ -22,7 +22,7 @@
 #include <iostream>
 
 namespace {
-    class SharedPtrTest : public nihpp::SharedPtrCreator<SharedPtrTest>::type
+    class SharedPtrTest : public nihpp::SharedPtrCreator<SharedPtrTest>
     {
         int &refcnt;
 
@@ -38,7 +38,7 @@ namespace {
         }
     };
 
-    class RefPtrTest : public nihpp::Glib::RefPtrCreator<RefPtrTest>::type
+    class RefPtrTest : public nihpp::Glib::RefPtrCreator<RefPtrTest>
     {
         int &refcnt;
         bool &constructed;

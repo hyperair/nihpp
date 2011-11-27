@@ -23,10 +23,8 @@
 namespace nihpp
 {
     template <typename T>
-    struct SharedPtrCreator
-    {
-        typedef PtrCreator<T, std::shared_ptr<T>> type;
-    };
+    struct SharedPtrCreator : PtrCreator<T, std::shared_ptr<T>>
+    {};
 }
 
 #endif // _NIHPP_SHAREDPTRCREATOR_HH_

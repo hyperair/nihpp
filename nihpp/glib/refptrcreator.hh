@@ -26,10 +26,8 @@ namespace nihpp
     namespace Glib
     {
         template <typename T>
-        struct RefPtrCreator
-        {
-            typedef PtrCreator<T, ::Glib::RefPtr<T>> type;
-        };
+        struct RefPtrCreator : PtrCreator<T, ::Glib::RefPtr<T>>
+        {};
     }
 }
 

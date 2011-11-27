@@ -23,6 +23,7 @@ if test "$ac_cv_cxx_stdcxx_0x" = no; then
     AC_MSG_ERROR([C++0x headers needed to build $PACKAGE])
 fi
 
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 PKG_CHECK_MODULES([GLIBMM], [glibmm-2.4])
 
 AC_CONFIG_FILES([

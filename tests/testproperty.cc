@@ -17,8 +17,10 @@ int main ()
 
     foo.bar = 1;
     assert (foo.bar == 1);
+    assert (foo.bar () == 1);
 
     foo.bar (2);
+    assert (foo.bar == 2);
     assert (foo.bar () == 2);
 
     return 0;

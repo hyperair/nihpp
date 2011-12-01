@@ -28,7 +28,7 @@ namespace nih
         void operator() (U &&value) {*data = std::forward<U> (value);}
 
         // getter
-        const T &operator() () {return *data;}
+        const T &operator() () const {return *data;}
 
     private:
         std::shared_ptr<type> data;
@@ -46,8 +46,8 @@ namespace nih
         ROProperty (std::function<T()> getter) : getter (getter) {}
         ROProperty (const ROProperty &) = delete;
 
-        T operator() () {return getter();}
-        operator T () {return getter();}
+        T operator() () const {return getter();}
+        operator T () const {return getter();}
     };
 
 

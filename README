@@ -17,6 +17,7 @@ Currently, classes available include:
  * nih::PtrCreator
  * nih::SharedPtrCreator
  * nih::Glib::RefPtrCreator
+ * nih::Singleton
 
 PtrCreator is a templated class that is meant to be derived from, which adds
 static create() functions to construct smart pointer classes. See
@@ -26,3 +27,8 @@ SharedptrCreator and Glib::RefPtrCreator are shortcuts for PtrCreator<T,
 shared_ptr<T>> and PtrCreator<T, Glib::RefPtr<T>> respectively. They would
 ideally be templated typedefs, but g++ does not seem to support them properly
 just yet.
+
+Singleton is a class that can be derived from to provide a static ::instance()
+function for easy implementation of singleton classes. It only supports the
+default constructor, as there is no way to pass arguments into the static
+singleton instance.

@@ -5,7 +5,8 @@ nihppdir = $(includedir)/nihpp
 nihpp_glibdir = $(nihppdir)/glib
 nihpp_HEADERS =					\
 	nihpp/ptrcreator.hh			\
-	nihpp/sharedptrcreator.hh
+	nihpp/sharedptrcreator.hh		\
+	nihpp/singleton.hh
 
 nihpp_glib_HEADERS =				\
 	nihpp/glib/refptrcreator.hh

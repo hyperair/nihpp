@@ -85,7 +85,12 @@ namespace nih
             ROProperty<T> (backend),
             WOProperty<T> (backend) {}
 
-        Property (const Property &) = delete;
+        Property (const Property<T> &p) :
+            Property (DataProperty<T> ())
+        {
+            setter (p ());
+        }
+
         Property &operator= (const Property &) = delete;
 
         using WOProperty<T>::operator();

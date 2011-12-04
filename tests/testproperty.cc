@@ -13,7 +13,8 @@ namespace
 
 int main ()
 {
-    foo foo;
+    ::foo foo;
+    ::foo bar (foo);
 
     foo.bar = 1;
     assert (foo.bar == 1);

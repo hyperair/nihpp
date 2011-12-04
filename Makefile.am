@@ -11,11 +11,16 @@ nihpp_HEADERS =					\
 nihpp_glib_HEADERS =				\
 	nihpp/glib/refptrcreator.hh
 
-TESTS = tests/testptrcreator
-check_PROGRAMS = tests/testptrcreator
+TESTS = $(check_PROGRAMS)
+check_PROGRAMS =				\
+	tests/testptrcreator			\
+	tests/testsingleton
+
 tests_testptrcreator_SOURCES = tests/testptrcreator.cc
 tests_testptrcreator_CXXFLAGS = $(GLIBMM_CFLAGS) $(AM_CXXFLAGS)
 tests_testptrcreator_LDADD = $(GLIBMM_LIBS)
+
+tests_testsingleton_SOURCES = tests/testsingleton.cc
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = nihpp.pc

@@ -1,7 +1,7 @@
 #ifndef _NIHPP_SINGLETON_HH_
 #define _NIHPP_SINGLETON_HH_
 
-namespace nih
+namespace nihpp
 {
     template <typename T>
     class Singleton

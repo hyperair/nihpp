@@ -18,6 +18,7 @@ Currently, classes available include:
  * nih::SharedPtrCreator
  * nih::Glib::RefPtrCreator
  * nih::Singleton
+ * sigc::functor_trait
 
 PtrCreator is a templated class that is meant to be derived from, which adds
 static create() functions to construct smart pointer classes. See
@@ -32,3 +33,9 @@ Singleton is a class that can be derived from to provide a static ::instance()
 function for easy implementation of singleton classes. It only supports the
 default constructor, as there is no way to pass arguments into the static
 singleton instance.
+
+sigc::functor_trait is a template specialization of sigc::functor_trait as found
+in libsigc++ that was implemented to allow lambdas, and other function objects
+(including std::function) with return values to work without any code changes
+apart from just #include-ing the header. The initial idea was ripped out from
+the SIGC_FUNCTOR_TRAIT macro.

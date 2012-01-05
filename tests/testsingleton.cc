@@ -6,7 +6,7 @@ namespace
     bool in_main;
     bool constructed;
 
-    class TestSingleton : public nih::Singleton<TestSingleton>
+    class TestSingleton : public nihpp::Singleton<TestSingleton>
     {
     public:
         TestSingleton ()

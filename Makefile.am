@@ -3,6 +3,7 @@ ACLOCAL_AMFLAGS = -Im4
 AM_CXXFLAGS = $(CXX0X_FLAG)
 nihppdir = $(includedir)/nihpp
 nihpp_glibdir = $(nihppdir)/glib
+nihpp_sigcdir = $(nihppdir)/sigc++
 nihpp_HEADERS =					\
 	nihpp/ptrcreator.hh			\
 	nihpp/sharedptrcreator.hh		\
@@ -10,6 +11,9 @@ nihpp_HEADERS =					\
 
 nihpp_glib_HEADERS =				\
 	nihpp/glib/refptrcreator.hh
+
+nihpp_sigc_HEADERS =				\
+	nihpp/sigc++/fixfunctors.hh
 
 TESTS = $(check_PROGRAMS)
 check_PROGRAMS =				\

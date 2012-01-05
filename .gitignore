@@ -15,6 +15,7 @@ aclocal.m4
 .dirstamp
 /tests/testptrcreator
 /tests/testsingleton
+/tests/testsigc
 *.o
 *~
 /nihpp.pc

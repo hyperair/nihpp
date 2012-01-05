@@ -25,6 +25,7 @@ fi
 
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 PKG_CHECK_MODULES([GLIBMM], [glibmm-2.4])
+PKG_CHECK_MODULES([SIGC], [sigc++-2.0])
 
 AC_CONFIG_FILES([
     Makefile

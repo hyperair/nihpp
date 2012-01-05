@@ -18,13 +18,18 @@ nihpp_sigc_HEADERS =				\
 TESTS = $(check_PROGRAMS)
 check_PROGRAMS =				\
 	tests/testptrcreator			\
-	tests/testsingleton
+	tests/testsingleton			\
+	tests/testsigc
 
 tests_testptrcreator_SOURCES = tests/testptrcreator.cc
 tests_testptrcreator_CXXFLAGS = $(GLIBMM_CFLAGS) $(AM_CXXFLAGS)
 tests_testptrcreator_LDADD = $(GLIBMM_LIBS)
+tests_testsigc_CXXFLAGS = $(SIGC_CFLAGS) $(AM_CXXFLAGS)
+tests_testsigc_LDADD = $(SIGC_LIBS)
 
 tests_testsingleton_SOURCES = tests/testsingleton.cc
+
+tests_testsigc_SOURCES = tests/testsigc.cc
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = nihpp.pc

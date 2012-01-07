@@ -24,7 +24,9 @@ namespace nihpp
 {
     template <typename T>
     struct SharedPtrCreator : PtrCreator<T, std::shared_ptr<T>>
-    {};
+    {
+        typedef std::weak_ptr<T> WPtr;
+    };
 }
 
 #endif // _NIHPP_SHAREDPTRCREATOR_HH_

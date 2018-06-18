@@ -18,6 +18,7 @@
 #ifndef _NIHPP_SHAREDPTRCREATOR_HH_
 #define _NIHPP_SHAREDPTRCREATOR_HH_
 
+#include <memory>
 #include <nihpp/ptrcreator.hh>
 
 namespace nihpp
